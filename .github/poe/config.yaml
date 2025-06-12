@@ -8,7 +8,7 @@ versioning:
   default_patch: 0
 create_maintenance_branch: true
 release_trigger:
-  enabled: false
+  enabled: true
   bump_major_token: bump-major
 channels:
   - name: next
@@ -19,6 +19,25 @@ channels:
     release:
       create_release: true
       prerelease: true
+
+  - name: test
+    policies:
+      approvals:
+        enabled: true
+        required_approvers: ["*"]
+    release:
+      create_release: true
+      prerelease: true
+
+  - name: pp
+    policies:
+      approvals:
+        enabled: true
+        required_approvers: ["*"]
+    release:
+      create_release: true
+      prerelease: false
+
   - name: stable
     policies:
       approvals:
