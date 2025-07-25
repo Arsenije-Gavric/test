@@ -1,1 +1,1 @@
-TEST 3 asdasd
+TEST 3
